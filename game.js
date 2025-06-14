@@ -48,7 +48,7 @@ function nextSequence()
  
 function playSound(name){
  
-    var audio = new Audio(name + ".mp3");       //play the sound of the selected colour
+    var audio = new Audio("./" + name + ".mp3");       //play the sound of the selected colour
     audio.play(); 
 } 
 function animatePress(currentColour){
@@ -76,7 +76,7 @@ if(gamePattern[currentLevel] === userClickedPattern[currentLevel])
 else { 
        console.log("Wrong"); 
 
-       var audio = new Audio("wrong.mp3");        //whenever user gets it wrong, play this sound         
+       var audio = new Audio("./wrong.mp3");        //whenever user gets it wrong, play this sound         
        audio.play();
 
        $("body").addClass("game-over");
